@@ -1,19 +1,19 @@
 {
   "name": "generator-theia-extension",
-  "version": "0.1.23",
+  "version": "0.1.24",
   "description": "Helps to setup the project structure for developing extensions to the Theia IDE",
   "repository": {
     "type": "git",
-    "url": "https://github.com/theia-ide/generator-theia-extension"
+    "url": "https://github.com/paradime-io/generator-theia-extension"
   },
   "bugs": {
-    "url": "https://github.com/theia-ide/generator-theia-extension/issues"
+    "url": "https://github.com/paradime-io/generator-theia-extension/issues"
   },
-  "homepage": "https://github.com/theia-ide/generator-theia-extension",
+  "homepage": "https://github.com/paradime-io/generator-theia-extension",
   "keywords": [
     "yeoman-generator"
   ],
-  "author": "TypeFox",
+  "author": "Paradime Labs Ltd",
   "license": "EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0",
   "dependencies": {
     "yeoman-generator": "^4.0.2"
