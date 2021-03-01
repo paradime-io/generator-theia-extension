@@ -51,7 +51,7 @@ yo theia-extension --help
 | `tree-editor` | Creates a tree editor extension | [readme](https://github.com/paradime-io/generator-theia-extension/blob/main/templates/tree-editor/README.md) |
 | `empty` | Creates a simple, minimal extension | [readme](https://github.com/paradime-io/generator-theia-extension/blob/main/templates/empty/README.md) |
 | `backend` | Creates a backend communication extension | [readme](https://github.com/paradime-io/generator-theia-extension/blob/main/templates/backend/README.md) |
-| `react-widget` | Creates a React App widget extension | [readme](https://github.com/paradime-io/generator-theia-extension/blob/main/templates/backend/README.md) |
+| `react-widget` | Creates a React App widget extension | [readme](https://github.com/paradime-io/generator-theia-extension/blob/main/templates/react-widget/README.md) |
 
 
 ## Publishing
