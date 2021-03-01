@@ -13,7 +13,7 @@
   "keywords": [
     "yeoman-generator"
   ],
-  "author": "Paradime Labs Ltd",
+  "author": "Paradime Labs Inc.",
   "license": "EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0",
   "dependencies": {
     "yeoman-generator": "^4.0.2"
