@@ -23,7 +23,8 @@ enum ExtensionType {
     LabelProvider = 'labelprovider',
     TreeEditor = 'tree-editor',
     Empty = 'empty',
-    Backend = 'backend'
+    Backend = 'backend',
+    ReactWidget = 'react-widget'
 }
 
 module.exports = class TheiaExtension extends Base {
@@ -151,7 +152,8 @@ module.exports = class TheiaExtension extends Base {
                     { value: ExtensionType.LabelProvider, name: 'LabelProvider' },
                     { value: ExtensionType.TreeEditor, name: 'TreeEditor' },
                     { value: ExtensionType.Backend, name: 'Backend Communication' },
-                    { value: ExtensionType.Empty, name: 'Empty' }
+                    { value: ExtensionType.Empty, name: 'Empty' },
+                    { value: ExtensionType.ReactWidget, name: 'React Widget'}
                 ]
             });
             (this.options as any).extensionType = answer.type;
@@ -400,6 +402,41 @@ module.exports = class TheiaExtension extends Base {
                 { params: this.params }
             );
         }
+        
+        /** react-widget */
+        if (this.params.extensionType === ExtensionType.ReactWidget) {
+            this.fs.copyTpl(
+                this.templatePath('react-widget/'),
+                this.extensionPath(`src/browser/`),
+                { params: this.params }
+            );
+            this.fs.move(
+                this.extensionPath('src/browser/README.md'),
+                this.extensionPath(`README.md`),
+                { params: this.params }
+            );
+            this.fs.move(
+                this.extensionPath('src/browser/frontend-module.ts'),
+                this.extensionPath(`src/browser/${this.params.extensionPath}-frontend-module.ts`),
+                { params: this.params }
+            );
+            this.fs.move(
+                this.extensionPath('src/browser/contribution.ts'),
+                this.extensionPath(`src/browser/${this.params.extensionPath}-contribution.ts`),
+                { params: this.params }
+            );
+            this.fs.move(
+                this.extensionPath('src/browser/widget.ts'),
+                this.extensionPath(`src/browser/${this.params.extensionPath}-widget.ts`),
+                { params: this.params }
+            );
+            this.fs.move(
+                this.extensionPath('src/browser/app.ts'),
+                this.extensionPath(`src/browser/${this.params.extensionPath}-app.ts`),
+                { params: this.params }
+            );
+        }
+
 
     }
 
